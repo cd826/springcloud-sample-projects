@@ -11,5 +11,6 @@
         <relativePath>../parent</relativePath>
     </parent>
     
-    <artifactId>product-service-api</artifactId>    
+    <artifactId>product-service-api</artifactId>
+    <name>Spring Cloud Sample Projects: Product Service API</name>
 </project>

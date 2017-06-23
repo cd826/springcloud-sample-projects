@@ -12,6 +12,7 @@
     </parent>
 
     <artifactId>service-discovery</artifactId>
+    <name>Spring Cloud Sample Projects: Eureka Server</name>
 
     <dependencies>
         <dependency>

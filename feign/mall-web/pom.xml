@@ -12,6 +12,7 @@
     </parent>
     
     <artifactId>mall-web</artifactId>
+    <name>Spring Cloud Sample Projects: Mall</name>
 
     <dependencies>
         <dependency>

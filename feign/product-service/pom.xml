@@ -12,6 +12,7 @@
     </parent>
 
     <artifactId>product-service</artifactId>
+    <name>Spring Cloud Sample Projects: Product Service Server</name>
 
     <dependencies>
         <dependency>
