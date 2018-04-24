@@ -39,7 +39,7 @@ public class ProductEventListener implements ApplicationListener<ProductEvent> {
     public void onApplicationEvent(ProductEvent productEvent) {
         if (ProductEvent.ET_UPDATE.equalsIgnoreCase(productEvent.getAction())) {
             this.logger.debug("Web微服务收到商品变更事件，商品货号: {}", productEvent.getItemCode());
-            // 重新获取该商品信息
+            // 重新获取该商品信息  
             ProductDto productDto = this.productService.loadByItemCode(productEvent.getItemCode());
             if (null != productDto)
                 this.logger.debug("重新获取到的商品信息为:{}", productDto);
