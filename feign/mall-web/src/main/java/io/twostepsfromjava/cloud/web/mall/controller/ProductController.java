@@ -42,8 +42,15 @@ public class ProductController {
         return this.productService.findAll();
     }
 
-    @RequestMapping(value = "/{itemCode}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{itemCode}", method = RequestMethod.POST)
     public Product detail(@PathVariable String itemCode) {
+        System.out.println("dddddddddd");
+        return this.productService.loadByItemCodeEx(itemCode, "OBgEDj", "restore");
+    }
+
+    @RequestMapping(value = "/t/{itemCode}", method = RequestMethod.POST)
+    public Product detailEx(@PathVariable String itemCode) {
+        System.out.println("dddddddddd");
         return this.productService.loadByItemCode(itemCode);
     }
 }

@@ -37,5 +37,14 @@
             <artifactId>product-service-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-    </dependencies>    
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

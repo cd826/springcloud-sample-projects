@@ -48,6 +48,19 @@ public class ProductEndpoint {
         return null;
     }
 
+    @RequestMapping(value = "/item/{itemCode}/instruction/execute", method = RequestMethod.POST)
+    public Product detailEx(@PathVariable String itemCode,
+                            @RequestParam(value = "user_id", required = false) String userId,
+                            @RequestParam(value = "instruction_code") String instructionCode) {
+        System.out.println("userId = " + userId);
+        List<Product> products = this.buildProducts();
+        for (Product product : products) {
+            if (product.getItemCode().equalsIgnoreCase(itemCode))
+                return product;
+        }
+        return null;
+    }
+
     protected List<Product> buildProducts() {
         List<Product> products = new ArrayList<>();
         products.add(new Product("item-1", "测试商品-1", "TwoStepsFromJava", 100));
